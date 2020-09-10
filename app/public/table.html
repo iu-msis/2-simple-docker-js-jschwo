@@ -29,7 +29,7 @@
   Data and Systems is the best class!
 </header>
 <body>
-  <table class="table">
+  <table id="bookTable" class="table">
   <thead>
     <tr>
       <th scope="col">Title</th>
@@ -114,5 +114,14 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
+<script src='js\tablesort.min.js'></script>
+
+/* tablesort plugin https://github.com/tristen/tablesort */
+
+<script>
+  new Tablesort(document.getElementById('bookTable'));
+</script>
+
 </body>
+
 </html>
