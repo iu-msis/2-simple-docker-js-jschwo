@@ -36,29 +36,23 @@
   Data and Systems is the best class!
 </header>
   <div id = "userProfile">
-    <h4>User Name {{userName}}</h4>
-    <h4>User Email {{userEmail}}</h4>
 
+
+    <h2>Random Person Generator</h2><br>
     <a v-ind:href="userImgL">
       <img v-bind:src="userImgL">
-    </a>
+    </a><br>
+    <br><h4>User Name: {{userName}}</h4>
+    <h4><a :href="'mailto:' + userEmail">Email: {{userEmail}}</h4></a>
+    <h4>Country of Origin: {{usernat}}</h4>
+    <h4>Date of Birth: {{userBday}}</h4>
+    <h4>Age: {{userAge}}</h4>
+
+
+
   </div>
 
-<br>
-<a href="img\diana.jpg">
-<img src="img\diana.jpg" alt="Diana" style="width:65px;">
-</a>
 
-<p> Cite: <a href="https://randomuser.me"> </p>
-
-<h1>Diana Watkins</h1>
-
-<ul id="list">
-<li>Country of origin: USA </li>
-<li> Birthday: 4/22/98</li>
-<li> Age: 22 </li>
-<li> Email: <a href="mailto: dianawatkins@example.com">dianawatkins@example.com</a> </li>
-</ul>
 </body>
 <script src="js/randomUser.app.js"></script>
 </html>

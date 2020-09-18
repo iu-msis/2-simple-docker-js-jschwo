@@ -1,6 +1,6 @@
 header {
   background: navy;
-  color: black;
+  color: white;
 }
 body {
  background-color: lightblue;
@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: orange;
+  color: darkgreen;
 }
 
 img {

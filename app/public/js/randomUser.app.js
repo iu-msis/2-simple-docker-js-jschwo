@@ -3,6 +3,9 @@ var app = new Vue({
   data: {
     userName: 'John Doe',
     userEmail: '',
+    usernat: '',
+    userBday: '',
+    userAge: '',
     userImgL: '',
     profileThumb: ''
 
@@ -22,6 +25,9 @@ var app = new Vue({
       console.log(userData);
      this.userName = userData.name.first + " " + userData.name.last;
      this.userEmail = userData.email;
+     this.usernat = userData.nat;
+     this.userBday = userData.dob.date.substring(0,10);
+     this.userAge = userData.dob.age;
      this.userImgL = userData.picture.large;
      this.profileThumb = userData.picture.small;
    });
