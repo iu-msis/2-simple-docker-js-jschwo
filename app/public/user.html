@@ -39,12 +39,12 @@
 
 
     <h2>Random Person Generator</h2><br>
-    <a v-ind:href="userImgL">
+    <a v-bind:href="userImgL">
       <img v-bind:src="userImgL">
     </a><br>
     <br><h4>User Name: {{userName}}</h4>
     <h4><a :href="'mailto:' + userEmail">Email: {{userEmail}}</h4></a>
-    <h4>Country of Origin: {{usernat}}</h4>
+    <h4>Country of Origin: {{userNat}}</h4>
     <h4>Date of Birth: {{userBday}}</h4>
     <h4>Age: {{userAge}}</h4>
 

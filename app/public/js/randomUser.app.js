@@ -3,7 +3,7 @@ var app = new Vue({
   data: {
     userName: 'John Doe',
     userEmail: '',
-    usernat: '',
+    userNat: '',
     userBday: '',
     userAge: '',
     userImgL: '',
@@ -25,7 +25,7 @@ var app = new Vue({
       console.log(userData);
      this.userName = userData.name.first + " " + userData.name.last;
      this.userEmail = userData.email;
-     this.usernat = userData.nat;
+     this.userNat = userData.location.country;
      this.userBday = userData.dob.date.substring(0,10);
      this.userAge = userData.dob.age;
      this.userImgL = userData.picture.large;
