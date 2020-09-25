@@ -16,9 +16,10 @@ var app = new Vue({
 
 
     methods: {
-    fetchUser: function() {
+      fetchUser: function() {
     // returns a promise
       fetch("https://randomuser.me/api/")
+
      .then( response => response.json())
      .then(data =>  {
       var userData = data.results[0];
@@ -32,6 +33,10 @@ var app = new Vue({
      this.profileThumb = userData.picture.small;
    });
 
+ },
+    createNewUser: function (){
+      this.fetchUser()
     }
+
   }
 })
