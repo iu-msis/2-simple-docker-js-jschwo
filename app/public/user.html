@@ -35,25 +35,33 @@
 <header>
   Data and Systems is the best class!
 </header>
-<form method="post" v-on:submit.prevent="createNewUser">
-  <div id = "userProfile">
-    <h2>Random Person Generator</h2><br>
-    <a v-bind:href="userImgL">
-      <img v-bind:src="userImgL">
-    </a><br>
-    <br><h4>User Name: {{userName}}</h4>
-    <h4><a :href="'mailto:' + userEmail">Email: {{userEmail}}</h4></a>
-    <h4>Country of Origin: {{userNat}}</h4>
-    <h4>Date of Birth: {{userBday}}</h4>
-    <h4>Age: {{userAge}}</h4>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
     </div>
-<br>
-    <button type="submit" class="btn btn-primary">Generate New Person</button>
-  </form>
+    <div class="col-cen">
+      <div id = "userProfile">
+        <form method="post" v-on:submit.prevent="createNewUser">
 
-
-
-
+          <h2>Random Person Generator</h2><br>
+          <a v-bind:href="userImgL">
+          <img v-bind:src="userImgL">
+          </a><br>
+          <br><h4>User Name: {{userName}}</h4>
+          <h4><a :href="'mailto:' + userEmail">Email: {{userEmail}}</h4></a>
+          <h4>Country of Origin: {{userNat}}</h4>
+          <h4>Date of Birth: {{userBday}}</h4>
+          <h4>Age: {{userAge}}</h4>
+          <br>
+          <button type="submit" class="btn btn-primary">Generate New Person</button>
+        </form>
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
 
 
 </body>

@@ -35,7 +35,7 @@ var app = new Vue({
 
  },
     createNewUser: function (){
-      this.fetchUser()
+    this.fetchUser()
     }
 
   }
