@@ -78,3 +78,7 @@ th[role=columnheader]:not(.no-sort):hover:after {
 col-cen {
   text-align: center;
 }
+
+btn btn-primary {
+  margin: 30px;
+}
