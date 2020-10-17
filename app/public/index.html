@@ -44,7 +44,7 @@
       <label for="commentText">Comments</label>
       <input type="text" v-model="newComment.input" class="form-control" id="commentText">
     </div>
-    <button type="submit" class="btn btn-primary" value="commentNew" id="submitNewComment">Submit</button>
+    <button type="submit" class="btn btn-primary" value="comment New" id="submitNewComment">Submit</button>
   </form>
   <br>
   <br>
@@ -58,7 +58,7 @@
     </thead>
     <tbody id="commentTableBody">
       <tr>
-        <div class="comments" v-for"comment in Comments">
+        <div class="comments" v-for"comment in comments">
         <td>{{id.id}}</td>
         <td>{{comment.commmentText}}</td>
       </div>

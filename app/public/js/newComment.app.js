@@ -1,11 +1,12 @@
 var commentInput = new Vue({
-  el: '#commentTableBody',
+  el: '#commentTable',
   data: {
     comments: [{
       id: "",
       commentText: ""
     }],
-    newComments: {
+
+    newComment: {
       input: ''
     }
   },
@@ -21,7 +22,7 @@ var commentInput = new Vue({
       },
 
     commentNew() {
-      //create ID?????
+    //  this.newComment.id = (this.newComment.commentText.substring(0,1)).toLowerCase();
       // TODO: Validate the data!
       fetch('api/comment/create.php', {
         method:'POST',
@@ -34,14 +35,25 @@ var commentInput = new Vue({
       .then( json => {
         console.log("Returned from post:", json);
         // TODO: test a result was returned!
-        this.ptList.push(json[0]);
-
+        this.comments.push(json[0]);
+        this.newComment = this.newCommentData();
       });
 
       console.log("Creating (POSTing)...!");
       console.log(this.newComment);
 
-      this.newComment = this.newCommentData();
+    },
+    newCommentData() {
+      return {
+        commentText: "",
+      }
     }
-  }
+
+    },
+
+    created(){
+      this.fetchUser();
+    }
+
+
 })
