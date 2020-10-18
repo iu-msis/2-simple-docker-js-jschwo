@@ -41,7 +41,7 @@
 <div class="form-group col-md-6">
 <h1> Insert comments about my website here!</h1>
 
-    <form v-on:submit.prevent="commentNew" method="post" id="newCommentForm">
+    <form v-on:submit.prevent="commentNew()" method="post" id="newCommentForm">
 
       <label for="commentText">Comments</label>
       <input type="text" v-model="newComment.input" class="form-control" id="commentText">
@@ -52,7 +52,7 @@
   <br>
   <br>
   <h3> Table of Comments</h3>
-  <table class="table" id="commentTable">
+  <table class="table table-bordered" id="commentTable">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -60,14 +60,16 @@
       </tr>
     </thead>
     <tbody id="commentTableBody">
-      <tr>
-        <div class="comments" v-for="comment in comments">
+      <tr class="comments" v-for="comment in comments">
+
         <td>{{comment.id}}</td>
         <td>{{comment.commmentText}}</td>
-      </div>
+
       </tr>
     </tbody>
   </table>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/randomUser.app.js"></script>
 </html>
