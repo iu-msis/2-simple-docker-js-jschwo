@@ -18,15 +18,16 @@ $stmt = $db->prepare(
 
 
 $stmt->execute([
-  $_POST['id'],
   $_POST['commentText']
 ]);
 
+
+
 // If needed, get auto-generated PK from DB
- $pk = $db->lastInsertId();  // https://www.php.net/manual/en/pdo.lastinsertid.php
+$pk = $db->lastInsertId(); //Not sure where this statement goes
 
 // Step 4: Output
 // Here, instead of giving output, I'm redirecting to the SELECT API,
 // just in case the data changed by entering it
 header('HTTP/1.1 303 See Other');
-header('Location: ../comment/??id=' . $_POST['id']);
+header('Location: ../comments/');

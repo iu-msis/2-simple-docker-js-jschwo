@@ -13,7 +13,7 @@ var commentInput = new Vue({
 
     methods:{
       fetchUser(){
-        fetch('api/comment/')
+        fetch('api/comments/')
         .then( response => response.json() )
         .then( json => {
           this.comments=json;
@@ -24,7 +24,7 @@ var commentInput = new Vue({
     commentNew() {
     //  this.newComment.id = (this.newComment.commentText.substring(0,1)).toLowerCase();
       // TODO: Validate the data!
-      fetch('api/comment/create.php', {
+      fetch('api/comments/create.php', {
         method:'POST',
         body: JSON.stringify(this.newComment),
         headers: {
