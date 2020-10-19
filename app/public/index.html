@@ -43,7 +43,7 @@
 <div class="form-group col-md-6">
 <h1> Insert comments about my website here!</h1>
 
-    <form v-on:submit.prevent="commentNew()" method="post" id="newCommentForm">
+    <form v-on:submit="commentNew()" method="post" id="newCommentForm">
       <div class="comments">
       <label for="commentText">Enter Comments</label>
       <input type="text" v-model="newComment.input" class="form-control" id="commentText">
