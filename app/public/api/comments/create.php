@@ -2,6 +2,7 @@
 
 require 'common.php';
 
+
 // Step 0: Validate the incoming data
 // This code doesn't do that, but should ...
 // For example, if the date is empty or bad, this insert fails.

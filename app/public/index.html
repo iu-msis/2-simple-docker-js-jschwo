@@ -43,11 +43,11 @@
 <div class="form-group col-md-6">
 <h1> Insert comments about my website here!</h1>
 
-    <form v-on:submit="commentNew()" method="post" id="newCommentForm">
-      <div class="comments">
+    <form v-on:submit.prevent="commentNew()" method="post" id="newComment">
+
       <label for="commentText">Enter Comments</label>
-      <input type="text" v-model="newComment.input" class="form-control" id="commentText">
-    </div>
+      <input type="text" v-model="newComment.commentText" class="form-control" id="commentText">
+
     <button type="submit" class="btn btn-primary" value="comment New" id="submitNewComment">Submit</button>
   </form>
   </div>
@@ -62,10 +62,10 @@
       </tr>
     </thead>
     <tbody id="commentTableBody">
-      <tr id="comments" v-for="comment in comments">
+      <tr v-for="comment in comments">
 
         <td>{{comment.id}}</td>
-        <td>{{comment.commmentText}}</td>
+        <td>{{comment.commentText}}</td>
 
       </tr>
     </tbody>

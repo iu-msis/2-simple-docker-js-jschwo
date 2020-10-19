@@ -2,12 +2,13 @@ var app = new Vue({
   el: '#comments',
   data: {
     comments: [{
-      id: "",
-      commentText: ""
+      id: '',
+      commentText: ''
     }],
 
     newComment: {
-      input: ''
+      id: '',
+      commentText: ''
     }
   },
 
@@ -35,7 +36,7 @@ var app = new Vue({
       .then( json => {
         console.log("Returned from post:", json);
         // TODO: test a result was returned!
-        this.comments.push(json[0]);
+        this.comments=json;
         this.newComment = this.newCommentData();
       });
 
@@ -45,7 +46,8 @@ var app = new Vue({
     },
     newCommentData() {
       return {
-        commentText: ""
+        id: '',
+        commentText:''
       }
     }
 
@@ -56,4 +58,4 @@ var app = new Vue({
     }
 
 
-})
+});
