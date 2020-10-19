@@ -24,7 +24,7 @@ $stmt->execute([
 
 
 // If needed, get auto-generated PK from DB
-$pk = $db->lastInsertId(); //Not sure where this statement goes
+$id = $db->lastInsertId(); //Not sure where this statement goes
 
 // Step 4: Output
 // Here, instead of giving output, I'm redirecting to the SELECT API,

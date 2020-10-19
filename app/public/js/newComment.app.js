@@ -1,5 +1,5 @@
-var commentInput = new Vue({
-  el: '#commentTableBody',
+var app = new Vue({
+  el: '#comments',
   data: {
     comments: [{
       id: "",
@@ -45,7 +45,7 @@ var commentInput = new Vue({
     },
     newCommentData() {
       return {
-        commentText: "",
+        commentText: ""
       }
     }
 
